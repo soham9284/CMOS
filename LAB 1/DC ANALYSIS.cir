@@ -1,0 +1,11 @@
+***DC ANALYSIS***
+R1 2 1 6K
+C1 1 0 18U
+VD 2 0 5V 
+.dc VD 0 5  0.1
+.control
+run
+plot V(1) 
+plot V(2)
+.endc
+.end

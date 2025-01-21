@@ -1,0 +1,10 @@
+***TRANSIENT ANALYSIS***
+R1 2 1 6K
+C1 1 0 18U
+VD 2 0 pulse(5 0 0 0 0 5 10) 
+.tran 0.1 20
+.control
+run
+plot V(1) V(2)
+.endc
+.end

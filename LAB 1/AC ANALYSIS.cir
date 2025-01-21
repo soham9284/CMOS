@@ -1,0 +1,10 @@
+***AC ANALYSIS***
+R1 2 1 6K
+C1 1 0 18U
+VD 2 0 dc 0 ac 5
+.ac dec 10 1 10K
+.control
+run
+plot V(1) V(2)
+.endc
+.end

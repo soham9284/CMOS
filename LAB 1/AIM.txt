@@ -1,0 +1,1 @@
+To perform different analysis on Voltage Divider circuit and RC circuit using Spice.
