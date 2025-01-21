@@ -1,0 +1,12 @@
+***Output Characteristics***
+VG 1 0 dc 2.5V
+VD 3 0 dc 2V
+V1 3 2 dc 0V
+.model nmod nmos level=54 version=4.7
+M1 2 1 0 0 nmod w=10u l=1u
+.dc VD 0 2 0.1
+.control
+run
+plot I(V1)
+.endc
+.end

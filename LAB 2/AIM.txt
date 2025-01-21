@@ -1,0 +1,1 @@
+To analyze V I characteristics of PMOS, NMOS and CMOS inverter
