@@ -1,0 +1,23 @@
+***3 input NOR Gate***
+VGA 1 0 pulse (5 0 0 0 0 2.5 5)
+VGB 2 0 pulse (7.5 0 0 0 0 5 10)
+VGC 3 0 pulse (10 0 0 0 0 10 20)
+VD 7 0 dc 2.5V
+
+.model nmod nmos level=54 version=4.7
+M1 4 1 0 0 nmod w=10u l=1u
+M2 4 2 0 0 nmod w=10u l=1u
+M3 4 3 0 0 nmod w=10u l=1u
+
+.model pmod pmos level=54 version=4.7
+M4 4 3 5 5 pmod w=10u l=1u
+M5 5 2 6 6 pmod w=10u l=1u
+M6 6 1 7 7 pmod w=10u l=1u
+
+.tran 0.1 40
+
+.control
+run
+plot V(4) V(1) V(2) V(3)
+.endc
+.end

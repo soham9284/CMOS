@@ -1,0 +1,17 @@
+***CMOS INVERTER***
+VG 1 0 dc 5V
+VD 2 0 dc 5V
+
+.model nmod nmos level=54 version=4.7
+M1 3 1 0 0 nmod w=10u l=1u
+
+.model pmod pmos level=54 version=4.7
+M2 3 1 2 2 pmod w=22u l=1u
+
+.dc VG 0 5 0.1
+
+.control
+run
+plot V(1) V(3)
+.endc
+.end

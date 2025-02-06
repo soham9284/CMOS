@@ -1,0 +1,4 @@
+1]CMOS Inverter
+2]2 input NAND gate
+3]3 input NOR gate
+4]y = (A+(B+C).D+E)'	
