@@ -1,0 +1,29 @@
+***y = ((A+B+C)D+E)'***
+VD 14 0 pulse (5 0 0 0 0 5 10)
+VDD 2 0 dc 2.5V
+VA 11 0 dc 0V
+VB 12 0 dc 0V
+VC 13 0 dc 1V
+VE 15 0 dc 0V
+
+.model nmod nmos level=54 version=4.7
+M1 16 11 0 0 nmod w=10u l=1u
+M2 16 12 0 0 nmod w=10u l=1u
+M3 16 13 0 0 nmod w=10u l=1u
+M4 17 14 16 16 nmod w=10u l=1u
+M5 17 15 0 0 nmod w=10u l=1u
+
+.model pmod pmos level=54 version=4.7
+M6 19 11 20 20 pmod w=10u l=1u
+M7 18 12 19 19 pmod w=10u l=1u
+M8 17 13 18 18 pmod w=10u l=1u
+M9 17 14 20 20 pmod w=10u l=1u
+M10 20 15 2 2 pmod w=10u l=1u
+
+.tran 0.1 40
+
+.control
+run
+plot V(17) V(11) V(14)
+.endc
+.end
